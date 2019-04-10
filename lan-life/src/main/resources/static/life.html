@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>Life</title>
+</head>
+
+<body>
+<div id="app">
+    <h2>作息记录</h2>
+    <div>
+        <button @click="add">新增</button>
+        <button @click="save">保存</button>
+    </div>
+
+
+    <table border="1" id="dataList">
+
+        <thead>
+        <tr align="center">
+            <th width="100px">日期</th>
+            <th width="100px">起床</th>
+            <th width="100px">睡眠</th>
+            <th width="100px">锻炼</th>
+            <th width="100px">学习</th>
+            <th width="100px">备注</th>
+            <th width="100px">操作</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+
+        <tr align="center" v-for="r in regularList">
+            <td><a :href="f.fileUrl">{{r.recordDate}}</a></td>
+            <td>{{f.upTime|formatTime}}</td>
+            <td>{{f.sleepTime|formatTime}}</td>
+            <td>{{f.workout}}</td>
+            <td>{{f.learn}}</td>
+            <td>{{f.comment}}</td>
+            <td>
+                <button @click="update">修改</button>
+                <button @click="del">删除</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<script src="js/vuejs-2.5.16.js" type="text/javascript"></script>
+<script src="js/axios-0.18.0.js" type="text/javascript"></script>
+<script src="js/life.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+server:
+  port: 18082
+spring:
+  application:
+    name: file-manager
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.173.27:3306/website?chracterEncoding=utf8
+    username: root
+    password: lty123
+  jpa:
+    database: mysql
+    show-sql: true
