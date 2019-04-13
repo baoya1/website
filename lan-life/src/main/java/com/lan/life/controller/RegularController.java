@@ -1,7 +1,7 @@
-package file.controller;
+package com.lan.life.controller;
 
-import file.domain.Regular;
-import file.service.RegularService;
+import com.lan.life.domain.Regular;
+import com.lan.life.service.RegularService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

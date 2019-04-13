@@ -1,6 +1,6 @@
-package file.dao;
+package com.lan.life.dao;
 
-import file.domain.Regular;
+import com.lan.life.domain.Regular;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

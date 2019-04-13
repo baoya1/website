@@ -1,4 +1,4 @@
-package file;
+package com.lan.life;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

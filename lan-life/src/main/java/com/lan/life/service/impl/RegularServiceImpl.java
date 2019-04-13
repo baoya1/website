@@ -1,13 +1,12 @@
-package file.service.impl;
+package com.lan.life.service.impl;
 
-import file.dao.RegularDao;
-import file.domain.Regular;
-import file.service.RegularService;
+import com.lan.life.dao.RegularDao;
+import com.lan.life.domain.Regular;
+import com.lan.life.service.RegularService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,7 +31,7 @@ regularDao.save(regular);
 
     @Override
     public Regular findById(Long id) {
-        //com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: file.domain.Regular$HibernateProxy$jIVrM0tZ["hibernateLazyInitializer"])
+        //com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: Regular$HibernateProxy$jIVrM0tZ["hibernateLazyInitializer"])
         //如果用getOne，查询记录有null字段，需要在实体类上加@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 //        return regularDao.getOne(id);
         return regularDao.findById(id).get();

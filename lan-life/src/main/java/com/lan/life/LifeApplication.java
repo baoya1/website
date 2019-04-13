@@ -1,4 +1,4 @@
-package file;
+package com.lan.life;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

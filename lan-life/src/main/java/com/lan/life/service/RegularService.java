@@ -1,6 +1,6 @@
-package file.service;
+package com.lan.life.service;
 
-import file.domain.Regular;
+import com.lan.life.domain.Regular;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
