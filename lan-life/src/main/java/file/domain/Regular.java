@@ -1,10 +1,12 @@
 package file.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -15,7 +17,8 @@ import java.util.Date;
 @Accessors(chain = true)
 @Entity
 @Table(name = "tb_regular")
-public class Regular {
+//@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
+public class Regular implements Serializable {
     /**
      * 自增主键
      */
@@ -48,13 +51,13 @@ public class Regular {
      * 是否锻炼
      */
     @Column(name = "is_workout")
-    private Boolean workout;
+    private String workout;
 
     /**
      * 是否学习
      */
     @Column(name = "is_learn")
-    private Boolean learn;
+    private String learn;
 
     /**
      * 备注信息

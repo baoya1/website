@@ -1,6 +1,7 @@
 package file.service;
 
 import file.domain.Regular;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -12,4 +13,10 @@ public interface RegularService {
     List<Regular> findAll();
 
     void add(Regular regular);
+
+    Regular findById(Long id);
+
+    void delete(Long id);
+
+    Page<Regular> findPage(Integer page, Integer size);
 }

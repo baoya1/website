@@ -1,4 +1,4 @@
-var vue = new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         regularList: []
@@ -30,42 +30,35 @@ var vue = new Vue({
     },
     methods: {
         findAll: function () {
-            var _this = this //this 表示vue对象
             axios.get('/regular').then(function (response) {
-                //this变成了window
-                _this.regularlist = response.data
+                app.regularList = response.data
 
             })
         },
         add: function () {
-            var _this = this //this 表示vue对象
-            axios.get('/regular').then(function (response) {
-                //this变成了window
-                _this.regularlist = response.data
-
-            })
+            app.regularList.push({})
         },
         save: function () {
-            var _this = this //this 表示vue对象
-            axios.get('/regular').then(function (response) {
-                //this变成了window
-                _this.regularlist = response.data
+            axios.post('/regular').then(function (response) {
+                app.regularList = response.data
 
             })
         },
         update: function () {
-            var _this = this //this 表示vue对象
             axios.get('/regular').then(function (response) {
-                //this变成了window
-                _this.regularlist = response.data
+                app.regularList = response.data
 
             })
         },
-        del: function () {
-            var _this = this //this 表示vue对象
+        del: function (id) {
+            axios.delete('/regular/'+id).then(function (response) {
+                app.regularList = response.data
+
+            })
+        },
+        findOne:function () {
             axios.get('/regular').then(function (response) {
-                //this变成了window
-                _this.regularlist = response.data
+                app.regularList = response.data
 
             })
         }
