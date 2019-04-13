@@ -1,7 +1,9 @@
 var app = new Vue({
     el: '#app',
     data: {
-        regularList: []
+        regularList: [],
+        pageNo: 1,          //当前页
+        pages:15,           //总页数
     },
     filters: {
         formatDate: function (val) {
@@ -32,14 +34,21 @@ var app = new Vue({
         findAll: function () {
             axios.get('/regular').then(function (response) {
                 app.regularList = response.data
-
+            })
+        },
+        findPage: function () {
+            axios.get('/regular/'+this.pageNo+"/"+10).then(function (response) {
+                app.regularList = response.data.list
+                app.pages=response.data.pages
             })
         },
         add: function () {
-            app.regularList.push({})
+            console.log(this)
+            console.log(this.regularList)
+            //this.regularList.push({})
         },
         save: function () {
-            axios.post('/regular').then(function (response) {
+            axios.post('/regular',this.regularList[0]).then(function (response) {
                 app.regularList = response.data
 
             })
@@ -66,7 +75,7 @@ var app = new Vue({
 
     },
     created: function () {
-        this.findAll()
+        this.findPage()
     }
 
 })
