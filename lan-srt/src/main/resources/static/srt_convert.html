@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>txt_convert</title>
+</head>
+
+<body>
+<div id="app">
+    <h2>文本处理</h2>
+
+    <h4>请选择srt文件</h4>
+    <!--<input name="file" type="file">
+    <button @click="convert">转换到原目录</button>-->
+    <form action="/srt" enctype="multipart/form-data" method="post">
+        <input name="file" type="file">
+        <button type="submit">转换srt</button>
+    </form>
+
+    <h4>请选择文本文件</h4>
+
+    <form action="/word" enctype="multipart/form-data" method="post">
+        <input name="file" type="file">
+        <button type="submit">文本去汉字</button>
+    </form>
+
+
+
+
+</div>
+<!--<script src="js/vuejs-2.5.16.js" type="text/javascript"></script>
+<script src="js/axios-0.18.0.js" type="text/javascript"></script>
+<script src="js/srt_convert.js" type="text/javascript"></script>-->
+</body>
+</html>

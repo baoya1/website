@@ -1,0 +1,23 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: file-manager
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.173.27:3306/website?chracterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: lty123
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+file:
+  path:
+    prefix: /usr/local/server/nginx/share/temp/
+#    prefix: /Users/lan/work/temp/
