@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
+ * 从炉石官网排行榜获取战棋前200名信息
  * @author lan
  * @date 2020/3/1 22:33
  */
