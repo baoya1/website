@@ -4,6 +4,7 @@ import java.io.File;
 
 /**
  * 删除文件夹内所有指定名称的文件
+ *
  * @author Lan
  * @date 2019/6/17 9:44
  */
@@ -31,11 +32,6 @@ public class DeleteFile {
         }
 
     }
-
-
-
-
-
 
 
 }

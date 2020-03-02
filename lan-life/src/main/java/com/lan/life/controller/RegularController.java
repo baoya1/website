@@ -30,13 +30,13 @@ public class RegularController {
     }
 
     @GetMapping("/{page}/{size}")
-    public Page<Regular> findPage(@PathVariable("page") Integer page, @PathVariable("size")Integer size) {
-        return regularService.findPage(page,size);
+    public Page<Regular> findPage(@PathVariable("page") Integer page, @PathVariable("size") Integer size) {
+        return regularService.findPage(page, size);
     }
 
 
     @PostMapping
-    public String add(@RequestBody Regular regular){
+    public String add(@RequestBody Regular regular) {
         try {
             regularService.add(regular);
             return "添加成功";
@@ -47,7 +47,7 @@ public class RegularController {
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") Long id){
+    public String delete(@PathVariable("id") Long id) {
         try {
             regularService.delete(id);
             return "删除成功";

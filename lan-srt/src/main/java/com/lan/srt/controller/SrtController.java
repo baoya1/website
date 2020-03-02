@@ -4,7 +4,6 @@ import com.lan.srt.domain.UserInfo;
 import com.lan.srt.service.SrtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -69,7 +68,7 @@ public class SrtController {
         String line = null;
         br.readLine();
 
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
             if (line.length() != 0) {
                 Pattern patternNum = Pattern.compile("^\\+?[1-9][0-9]*$", 8);
                 Matcher m1 = patternNum.matcher(line);

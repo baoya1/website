@@ -18,6 +18,7 @@
         <module>lan-file</module>
         <module>lan-life</module>
         <module>lan-srt</module>
+        <module>lan-game</module>
     </modules>
     <packaging>pom</packaging>
 

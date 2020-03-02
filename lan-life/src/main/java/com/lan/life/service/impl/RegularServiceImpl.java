@@ -26,7 +26,7 @@ public class RegularServiceImpl implements RegularService {
 
     @Override
     public void add(Regular regular) {
-regularDao.save(regular);
+        regularDao.save(regular);
     }
 
     @Override
@@ -40,7 +40,7 @@ regularDao.save(regular);
 
     @Override
     public void delete(Long id) {
-regularDao.deleteById(id);
+        regularDao.deleteById(id);
     }
 
     @Override

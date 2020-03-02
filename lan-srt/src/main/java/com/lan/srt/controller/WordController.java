@@ -68,7 +68,7 @@ public class WordController {
         String regex1 = "[\\u4e00-\\u9fa5]";
         Pattern pattern1 = Pattern.compile(regex1);
 
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
             Matcher matcher = pattern1.matcher(line);
             line = matcher.replaceAll("");
             line = line.replaceAll("[\\?\\!\\.]", "$0 ");
